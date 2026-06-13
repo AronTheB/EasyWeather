@@ -2,7 +2,8 @@
 # This is a ESP32 and BME280 based temperature, humidity, and barometric pressure measurer
 
 ## Description
-### MADE FOR https://fallout.hackclub.com/
+
+### MADE FOR [FALLOUT](https://fallout.hackclub.com/) 
 
 ### Why did i make this
 
@@ -23,3 +24,5 @@ I always had this idea, because i never know what to wear outside before leaving
 ## FUSION 
 
 <img width="408" height="576" alt="image" src="https://github.com/user-attachments/assets/2a5ddc94-0a05-45ec-bfc7-8940f6fbd9d5" />
+
+

@@ -1,6 +1,11 @@
 
 # ESP32 and BME280 based temperature, humidity, and barometric pressure measurer
 
+
+## Zine
+<img width="2250" height="3450" alt="Zine" src="https://github.com/user-attachments/assets/a94ebbda-1810-4cc1-a2e8-3dbaddabde81" />
+
+
 ## Description
 
 ### Made for [Fallout](https://fallout.hackclub.com/) during a online weekend hackathon

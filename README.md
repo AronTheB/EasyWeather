@@ -1,5 +1,5 @@
 
-# This is a ESP32 and BME280 based temperature, humidity, and barometric pressure measurer
+#ESP32 and BME280 based temperature, humidity, and barometric pressure measurer
 
 ## Description
 
@@ -9,7 +9,13 @@
 
 I always had this idea, because i never know what to wear outside before leaving my house and I cant be hassled to check the weather app, so i will place this at a window so i can look and and check the temperature and other weather stats.
 
-### 
+### How to build
+
+Download the Gerber files and the 3d models and print them out. (I recomend JLCPCB and Prining Leigion). Order all the parts from the BOM section. After everything arrives solder the components togeather with the board and put the PCB in the case and Screw it in with a 2mm Screw. After close the box and screw it in with 3mm Screws. Connect the ESP32 to your computer and flash it with the firmware.
+
+### How to use
+
+After flashing it, turn the ESP32 back on and it should start automaticly. If everything worked out it should start showing the data on the OLED screen.
 
 ## KICAD
 

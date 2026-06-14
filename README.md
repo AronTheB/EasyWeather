@@ -31,4 +31,15 @@ After flashing it, turn the ESP32 back on and it should start automaticly. If ev
 
 <img width="408" height="576" alt="image" src="https://github.com/user-attachments/assets/2a5ddc94-0a05-45ec-bfc7-8940f6fbd9d5" />
 
+## BOM
+
+| NAME | LINK | PRICE | QUANTITY | Need To buy? |
+|------|------|-------|----------|--------------|
+| XIAO ESP32-S3 | [AliExpress](https://www.aliexpress.com/item/1005007341749305.html) | $10,35 | 1 | Yes |
+| BME280 | [AliExpress](https://www.aliexpress.com/item/1005006982994037.html) | $1,82 | 1 | Yes |
+| 4,7k Resistors | [AliExpress](https://www.aliexpress.com/item/1005007345052730.html) | $1,36 | 1 | Yes |
+| 3D Case | Printing Legion | $5,00 | 1 | Yes |
+| PCB | JLCPCB | $5,00 | 1 | Yes |
+| **TOTAL** | | **$23,53** | | |
+
 

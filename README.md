@@ -1,5 +1,5 @@
 
-#ESP32 and BME280 based temperature, humidity, and barometric pressure measurer
+# ESP32 and BME280 based temperature, humidity, and barometric pressure measurer
 
 ## Description
 

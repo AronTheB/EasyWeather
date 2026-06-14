@@ -2,9 +2,13 @@
 #include <Adafruit_Sensor.h>
 #include <Adafruit_BME280.h>
 #include <WiFi.h>
+#include <Adafruit_SSD1306.h>
 
 #define SEALEVELPRESSURE_HPA (1013.25)
-
+#define SCREEN_WIDTH 128
+#define SCREEN_HEIGHT 64
+#define OLED_RESET -1
+Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 Adafruit_BME280 bme; // I2C
 
 const char* ssid = "123";
@@ -22,6 +26,18 @@ void setup() {
         while (1);
     }
 
+    if (!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) {
+        Serial.println("Could not find SSD1306!");
+        while (1);
+    }
+    display.clearDisplay();
+    display.setTextColor(SSD1306_WHITE);
+
+    display.setTextSize(1);
+    display.setCursor(0, 0);
+    display.print("Connecting WiFi...");
+    display.display();
+
     Serial.print("Connecting to ");
     Serial.println(ssid);
     WiFi.begin(ssid, password);
@@ -29,17 +45,17 @@ void setup() {
       delay(500);
       Serial.print(".");
     }
-    Serial.println("");
-    Serial.println("WiFi connected.");
-    Serial.println("IP address: ");
-    Serial.println(WiFi.localIP());
-    server.begin();
 
-    Serial.println("-- Default Test --");
-    Serial.println("normal mode, 16x oversampling for all, filter off,");
-    Serial.println("0.5ms standby period");
+    display.clearDisplay();
+    display.setCursor(0, 0);
+    display.print("WiFi connected!");
+    display.setCursor(0, 10);
+    display.print(WiFi.localIP());
+    display.display();
+    delay(2000);
+
+    server.begin();
     delayTime = 5000;
-    Serial.println();
 }
 
 void loop() {
@@ -51,22 +67,29 @@ void loop() {
 
 // Add webserver later
 void printValues() {
-    Serial.print("Temperature = ");
-    Serial.print(bme.readTemperature());
-    Serial.println(" *C");
+    float temperature = bme.readTemperature();
+    float humidity = bme.readHumidity();
+    float altitude = bme.readAltitude(SEALEVELPRESSURE_HPA);
+    float pressure = bme.readPressure() / 100.0F;
 
-    Serial.print("Pressure = ");
+    Serial.printf("Temp: %.1f C | Pressure: %.1f hPa | Alt: %.1f m | Hum: %.1f%%\n",temperature, pressure, altitude, humidity);
 
-    Serial.print(bme.readPressure() / 100.0F);
-    Serial.println(" hPa");
+    display.clearDisplay();
+    display.setTextSize(1);
+    display.setCursor(0, 0);
+    display.printf("Temp: %.1f C\n", temperature);
 
-    Serial.print("Approx. Altitude = ");
-    Serial.print(bme.readAltitude(SEALEVELPRESSURE_HPA));
-    Serial.println(" m");
+    display.setCursor(0, 16);
+    display.printf("Pressure: %.1f hPa\n", pressure);
 
-    Serial.print("Humidity = ");
-    Serial.print(bme.readHumidity());
-    Serial.println(" %");
+    display.setCursor(0, 32);
+    display.printf("Humidity: %.1f%%\n", humidity);
 
-    Serial.println();
+    display.setCursor(0, 48);
+    display.printf("Altitude: %.1f m\n", altitude);
+    
+    display.display();
+
+    
+
 }

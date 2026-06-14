@@ -87,9 +87,6 @@ void printValues() {
 
     display.setCursor(0, 48);
     display.printf("Altitude: %.1f m\n", altitude);
-    
+
     display.display();
-
-    
-
 }

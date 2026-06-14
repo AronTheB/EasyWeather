@@ -12,7 +12,7 @@
 
 ### Why did i make this
 
-I always had this idea, because i never know what to wear outside before leaving my house and I cant be hassled to check the weather app, so i will place this at a window so i can look and and check the temperature and other weather stats.
+I always had this idea, because i never know what to wear outside before leaving my house and I can't be hassled to check the weather app, so i will place this at the door window, so i can look and and check the temperature and other weather stats before leaving.
 
 ### How to build
 

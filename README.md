@@ -34,11 +34,12 @@ After flashing it, turn the ESP32 back on and it should start automaticly. If ev
 
 ### PCB Render (Front/Back)
 
-<img width="796" height="681" alt="image" src="https://github.com/user-attachments/assets/84d4011b-e66b-4062-a20a-490c1c291597" />
+<img width="826" height="678" alt="image" src="https://github.com/user-attachments/assets/218feaec-7351-49ff-80a5-f60efd4a12aa" />
 
-## FUSION 
+## FUSION (Front/Back)
 
-<img width="408" height="576" alt="image" src="https://github.com/user-attachments/assets/2a5ddc94-0a05-45ec-bfc7-8940f6fbd9d5" />
+<img width="995" height="682" alt="image" src="https://github.com/user-attachments/assets/b28c7f59-bb8f-41ab-b07d-2bbc3f2a864e" />
+
 
 ## BOM
 

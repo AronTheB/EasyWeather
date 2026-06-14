@@ -3,7 +3,7 @@
 
 ## Description
 
-### MADE FOR [FALLOUT](https://fallout.hackclub.com/) 
+### Made for [Fallout](https://fallout.hackclub.com/) during a online weekend hackathon
 
 ### Why did i make this
 
